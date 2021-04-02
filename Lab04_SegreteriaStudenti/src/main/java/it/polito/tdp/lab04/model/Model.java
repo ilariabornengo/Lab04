@@ -52,6 +52,11 @@ public class Model {
 	public List<Corso> getTuttiICorsiSingoloStudente(Studente studente) {
 		return this.studenteDao.getTuttiICorsiSingoloStudente(studente);
 	}
+	public List<Studente> inscriviStudenteACorso(Studente studente, Corso corso) {
+		this.dao.inscriviStudenteACorso(studente, corso);
+		return this.dao.getStudentiPerCorso();
+	
+	}
 	
 	
 
